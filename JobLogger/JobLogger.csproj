@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleLogListener.cs" />
+    <Compile Include="OriginalFile.cs" />
     <Compile Include="SqlLogListener.cs" />
     <Compile Include="FileLogListener.cs" />
     <Compile Include="ILogListener.cs" />
