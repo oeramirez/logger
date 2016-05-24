@@ -23,7 +23,7 @@ namespace Tests.Unit.JobLogger
             logger.Listeners.Add(listener);
 
             string message = Guid.NewGuid().ToString();
-            string expectedText = string.Format("{0} {1} {2}\n", testTime.ToString("s"), "Warning", message);
+            string expectedText = string.Format("{0} {1} {2}", testTime.ToString("s"), "Warning", message);
 
             string expectedFileName = "LogFile_" + testTime.ToString("yyyy-MM-dd") + ".txt";
             string expectedFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, expectedFileName);

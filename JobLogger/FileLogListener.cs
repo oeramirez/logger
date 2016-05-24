@@ -40,10 +40,10 @@ namespace JobLogger
 
             string path = Path.Combine(_logDirectory, filename);
 
-            string text = string.Format("{0} {1} {2}\n", (TestTime ?? DateTime.Now).ToString("s"), logLevel.ToString(), message);
+            string text = string.Format("{0} {1} {2}", (TestTime ?? DateTime.Now).ToString("s"), logLevel.ToString(), message);
 
             // AppendAllText creates the file if it doesn't exist
-            File.AppendAllText(path, text);
+            File.AppendAllLines(path, new string[] { text });
         }
     }
 }
